@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Battery bean -->
+    <bean id="Battery" class="com.product.demo.Battery">
+        <property name="productId" value="123"/>
+        <property name="productName" value="Battery"/>
+        <property name="price" value="19.99"/>
+        <property name="rechargeable" value="true"/>
+    </bean>
+
+    <!-- Define Disc bean -->
+    <bean id="Disc" class="com.product.demo.Disc">
+        <property name="productId" value="456"/>
+        <property name="productName" value="Disc"/>
+        <property name="price" value="9.99"/>
+        <property name="capacity" value="700"/>
+    </bean>
+
+</beans>
