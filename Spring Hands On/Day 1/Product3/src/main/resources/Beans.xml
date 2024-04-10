@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="classpath:discount.properties" />
+</bean>
+
+<bean id="product" class="com.product.demo.product">
+		 <property name="productId" value="454"/>
+        <property name="productName" value="dfg"/>
+        <property name="price" value="782"/>
+		</bean>
+
+  <bean id="Battery" class="com.product.demo.Battery">
+        <constructor-arg index="0" value="1234"/>
+        <constructor-arg index="1" value="AA Battery"/>
+        <constructor-arg index="2" value="20"/>
+        <constructor-arg index="3" value="true"/>
+    </bean>
+
+    <bean id="Disc" class="com.product.demo.Disc">
+        <constructor-arg index="0" value="5678"/>
+        <constructor-arg index="1" value="DVD-RW"/>
+        <constructor-arg index="2" value="40"/>
+        <constructor-arg index="3" value="700"/>
+    </bean>
+    
+  <bean id="discount" class="com.product.demo.Discount">
+    <property name="specialCustomerDiscount" value="${specialcustomer.discount}" />
+    <property name="summerDiscount" value="${summer.discount}" />
+    <property name="endOfYearDiscount" value="${endofyear.discount}" />
+</bean>
+
+</beans>
